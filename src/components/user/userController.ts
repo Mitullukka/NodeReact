@@ -171,7 +171,7 @@ async function changePassword(req:Request,res:Response){
 }
 
 
-export async function questionCreate(req: Request, res: Response) {
+ async function questionCreate(req: Request, res: Response) {
   try {
     const { title } = req.body;
 
@@ -188,7 +188,7 @@ export async function questionCreate(req: Request, res: Response) {
   }
 }
 
-export async function questionAnsCreate(req: Request, res: Response) {
+ async function questionAnsCreate(req: Request, res: Response) {
     try {
       const { questionId, answer,isCorrect } = req.body;
      
@@ -211,7 +211,7 @@ export async function questionAnsCreate(req: Request, res: Response) {
     }
   }
 
-  export async function getOption(req: Request, res: Response) {
+   async function getOption(req: Request, res: Response) {
     try {
       const options = await Question.aggregate([
         {
@@ -243,7 +243,7 @@ export async function questionAnsCreate(req: Request, res: Response) {
   }
 
 
-  export async function submitExam(req: Request, res: Response) {
+   async function submitExam(req: Request, res: Response) {
     try {
       const { userId, responses } = req.body; 
   
